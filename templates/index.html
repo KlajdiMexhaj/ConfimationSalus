@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Konfirmoni pjesëmarrjen tuaj në Konferencën e Hematologjisë</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="emer">Emër</label>
+                <input type="text" id="emer" name="emer" placeholder="Shkruani emrin tuaj" required>
+            </div>
+            <div class="form-group">
+                <label for="mbiemer">Mbiemër</label>
+                <input type="text" id="mbiemer" name="mbiemer" placeholder="Shkruani mbiemrin tuaj" required>
+            </div>
+            <div class="form-group">
+                <label for="specialiteti">Specialiteti</label>
+                <input type="text" id="specialiteti" name="specialiteti" placeholder="Shkruani specialitetin tuaj" required>
+            </div>
+            <div class="form-group">
+                <p>Ju lutem konfirmoni pjesëmarrjen:</p>
+                <label>
+                    <input type="checkbox" name="confirmation" value="po" required>
+                    <span class="toggle-label">Po</span>
+                </label>
+            </div>
+            <button type="submit" class="btn">Konfirmo</button>
+        </form>
+    </div>
+ 
+</body>
+</html>
